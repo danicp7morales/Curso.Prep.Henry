@@ -4,10 +4,11 @@
 const nuevaString = "programando ahora";
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = 10;
+const nuevoNum = 11;
 
 // Crea una variable booleana:
-const nuevoBool = false;
+//const nuevoBool = false;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -29,13 +30,13 @@ function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
   return str;
-  
 }
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
+  
   return x + y;
   
 }
@@ -133,6 +134,7 @@ function elevarAlCubo(num) {
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
+  
   
 }
 
