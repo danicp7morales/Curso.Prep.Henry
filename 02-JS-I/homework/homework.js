@@ -156,7 +156,8 @@ function elevarAlCuadrado(num) {
   // ojo: No es raiz cuadrada!
   // Tu código:
   //return num * num;
-  return Math.pow(num, 2);
+  // return Math.pow(num, 2);
+  return num ** 2;
   
 }
 
@@ -164,13 +165,15 @@ function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
   //return (num * num ) * num;
-  return Math.pow(num, 3);
+  // return Math.pow(num, 3);
+  return num ** 3;
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return Math.pow(num, exponent);
+  // return Math.pow(num, exponent);
+ return num ** exponent;
   
   
   
@@ -202,14 +205,22 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve falso:
-  if(numero > 0){
+  /*if(numero > 0){
     return "Es positivo"; 
   }else if(numero < 0){
     return "Es negativo";
   }else{
     return false;
-  }
+  }*/
+ 
+  /*if(numero > 0)return "Es positivo";
+  if(numero < 0)return "Es negativo";
+  return false;*/
   
+  let num = numero > 0 ? "Es positivo" : numero < 0 ? "Es negativo" : false;
+  return num;
+
+
 }
 
 function agregarSimboloExclamacion(str) {
@@ -219,7 +230,9 @@ function agregarSimboloExclamacion(str) {
   //return str+"!";
   let signo = "!";
   let strin = str;
-  return `${strin}${signo}`;
+  //return `${strin}${signo}`;
+  let agregar = strin.concat(signo);
+  return agregar;
 }
 
 function combinarNombres(nombre, apellido) {
@@ -229,7 +242,9 @@ function combinarNombres(nombre, apellido) {
   //return nombre +" "+ apellido;
   let nombres = nombre;
   let apellidos = apellido;
-  return `${nombres} ${apellidos}`;
+  //return `${nombres} ${apellidos}`;
+  let unir = nombres.concat(" ", apellidos);
+  return unir;
   
 }
 
@@ -239,7 +254,10 @@ function obtenerSaludo(nombre) {
   // Tu código:
   //return "Hola "+ nombre +"!";
   let nombres = nombre;
-  return `Hola ${nombres}!`;
+  //return `Hola ${nombres}!`;
+  let ho = "Hola";
+  let saludit = ho.concat(" ",nombres,"!");
+  return saludit;
   
 }
 
@@ -295,13 +313,43 @@ function esVocal(letra){
 } else {
     return "Dato incorrecto";
   }*/
-  if(letra.length !== 1 || typeof letra !== "string"){
+  /*if(letra.length !== 1 || typeof letra !== "string"){
     return "Dato incorrecto";
   }else if(letra === "a"|| letra === "e" || letra === "i" || letra === "o" || letra === "u"){
     return  "Es vocal";
   }else{
     return "Dato incorrecto";
-  }
+  }*/
+  /*switch(letra){
+    case "a":
+      return "Es vocal";
+      break;
+      case "e":
+        return "Es vocal";
+        break;
+        case "i":
+          return "Es vocal";
+          break;
+          case "o":
+            return "Es vocal";
+            break;
+            case "u":
+              return "Es vocal";
+              break;
+              default:
+                return "Dato incorrecto";
+    
+
+  }*/
+  
+
+  //let letter = letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u" ?
+  //"Es vocal" : "Dato incorrecto";
+  //return letter;
+  const arrayletras = ["a", "e" ,"i" ,"o" ,"u"];
+  if(arrayletras.includes(letra))return "Es vocal";
+  return "Dato incorrecto";
+
   
 }
 
