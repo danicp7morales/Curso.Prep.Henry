@@ -27,7 +27,15 @@ function numberOfCharacters(string) {
   string.split("").forEach((item) => {
     if(!letra.includes(item)) letra.push(item);
   })
-  return letra;
+  let rep = {};
+  letra.forEach((item) =>{
+    let contador = 0;
+    string.split("").forEach((items) => {
+      if(item === items)contador+=1;
+    })
+    rep[item] = contador;
+  })
+  return rep;
 }
 
 
@@ -36,7 +44,20 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  const string = [];
+  let start = 0;
+  for(let i = 0; i < s.length; i++){
+    if(s[i] === s[i].toUpperCase()){
+      string.splice(start, 0, s[i]);
+      start++;
+    }else{
+      string.push(s[i]);
+    }
+  }
+  
+  return string.join("");
 }
+
 
 
 function asAmirror(str) {
@@ -45,6 +66,8 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  
+
 } 
 
 
@@ -53,13 +76,14 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+ 
 }
-
 
 function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  
 }
 
 
