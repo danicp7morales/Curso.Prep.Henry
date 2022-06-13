@@ -1,6 +1,5 @@
 // No cambies los nombres de las funciones.
 
-const { resetTask } = require("simple-git/src/lib/tasks/reset");
 
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
@@ -28,11 +27,25 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  const newArray = [];
+ /* const newArray = [];
   for(let i = 0; i < array.length; i++){
     newArray.push(array[i] + 1);
   }
-  return newArray;
+  return newArray;*/
+  const sumaUno =[];
+  let i = 0;
+  while(i < array.length){
+    sumaUno.push(array[i] +1);
+    i++;
+  }
+  return sumaUno;
+  
+  /*let sumanum = [];
+   array.forEach(element => {
+    sumanum.push(element + 1);
+  });
+  return sumanum;*/
+  
 }
 
 
@@ -40,8 +53,11 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-   array.push(elemento);
-   return array;
+
+  // array.push(elemento);
+
+  array[array.length] = elemento;
+  return array;
 }
 
 
@@ -61,8 +77,10 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  const arrayFrases = palabras.join(" ");
-  return arrayFrases;
+   const arrayFrases = palabras.join(" ");
+   return arrayFrases;
+
+  
 
 }
 
@@ -71,12 +89,20 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  for(let i = 0; i < array.length; i++){
+  /*for(let i = 0; i < array.length; i++){
     if(array[i] === elemento){
       return true;
     }
   }
-  return false;
+  return false;*/
+ // let verdad = array.some(elem => elem === elemento);
+  //return verdad;
+
+  return array.some(elem => elem === elemento);
+
+ 
+  
+
 }
 
 
@@ -84,11 +110,16 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  let sumaDeNumeros = 0;
+  /*let sumaDeNumeros = 0;
   for(let i = 0; i < numeros.length; i++){
     sumaDeNumeros += numeros[i];
   }
-  return sumaDeNumeros;
+  return sumaDeNumeros;*/
+  return numeros.reduce(function(a, b){ return a + b; });
+  
+  
+  
+ 
 }
 
 
@@ -111,6 +142,11 @@ function numeroMasGrande(numeros) {
     }
   }
   return elNumeroMasGrande;
+
+  
+
+  
+  
 }
 
 
@@ -126,7 +162,8 @@ function multiplicarArgumentos() {
  }
  return nSuma;
 }
-multiplicarArgumentos(2, 3, 5)
+//multiplicarArgumentos(2, 3, 5)
+
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
@@ -148,11 +185,17 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí 
-  if(numeroDeDia === 1 || numeroDeDia === 7){
+  /*if(numeroDeDia === 1 || numeroDeDia === 7){
     return "Es fin de semana";
   } else{
     return "Es dia Laboral";
-  } 
+  } */
+
+  // if(numeroDeDia === 1 || numeroDeDia === 7) return "Es fin de semana";
+  // return "Es dia Laboral";
+
+  let num = numeroDeDia === 1 || numeroDeDia === 7 ? "Es fin de semana" : "Es dia Laboral";
+  return num;
   
 } 
 
@@ -175,12 +218,15 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí 
-  for(let i = 0; i < arreglo.length; i++){
+  /*for(let i = 0; i < arreglo.length; i++){
     if(arreglo[0] !== arreglo[i] ){
       return false;
     }
   }
-  return true;
+  return true;*/
+  let verdad = arreglo.every(elem => elem === arreglo[0]);
+  return verdad;
+
 } 
 
 
@@ -202,6 +248,10 @@ function mesesDelAño(array) {
   }else{
     return "No se encontraron los meses pedidos"
   }
+
+ 
+
+
 }
 
 
@@ -209,13 +259,17 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
-  const newArray7 = [];
+  /*const newArray7 = [];
   for(let i = 0; i < array.length; i++){
     if(array[i] > 100){
       newArray7.push(array[i]);
     }
   }
-  return newArray7;
+  return newArray7;*/
+ const result = array.filter( arr => arr > 100);
+ return result;
+
+
 }
 
 

@@ -55,9 +55,13 @@ function conection(status) {
   }*/
 
   // operador ternario:
-  let conett = status === 1 ? "Online" : status === 2 ? "Away" : "Offline";
-  return conett;
+  //let conett = status === 1 ? "Online" : status === 2 ? "Away" : "Offline";
+  //return conett;
 
+  if(status === 1) return "Online";
+  if(status === 2) return "Away";
+  return "Offline";
+  
 }
 
 function saludo(idioma) {
@@ -81,7 +85,8 @@ function saludo(idioma) {
   /*let hablar = idioma === "aleman" ? "Guten Tag!": idioma === "mandarin" ? "Ni Hao!" :
   idioma === "ingles" ? "Hello!" : "Hola!";
   return hablar;*/
-  switch(idioma){
+
+ /* switch(idioma){
     case "aleman":
       return "Guten Tag!";
       break;
@@ -93,7 +98,12 @@ function saludo(idioma) {
           break;
           default :
           return "Hola!";
-  }
+  }*/
+  if(idioma === "aleman") return "Guten Tag!";
+  if(idioma === "mandarin") return "Ni Hao!";
+  if(idioma === "ingles") return "Hello!";
+  return "Hola!";
+
 }
 
 function colors(color) {
@@ -121,9 +131,15 @@ function colors(color) {
     return"Color not found";
 
   }*/
-  let colores = color === "blue" ? "This is blue" : color === "red" ? "This is red" : color === "green" ?
-  "This is green" : color === "orange" ?  "This is orange" : "Color not found";
-  return colores;
+  //let colores = color === "blue" ? "This is blue" : color === "red" ? "This is red" : color === "green" ?
+  //"This is green" : color === "orange" ?  "This is orange" : "Color not found";
+  //return colores;
+   
+  if(color === "blue") return "This is blue";
+  if(color === "red") return "This is red";
+  if(color === "green") return "This is green";
+  if(color === "orange") return "This is orange";
+  return "Color not found";
 }
 
 function esDiezOCinco(numero) {
