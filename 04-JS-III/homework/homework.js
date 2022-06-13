@@ -143,6 +143,8 @@ function numeroMasGrande(numeros) {
   }
   return elNumeroMasGrande;
 
+ 
+
   
 
   
@@ -168,14 +170,17 @@ function multiplicarArgumentos() {
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-  var suma = 0;
+  /*var suma = 0;
   for(var i = 0; i < arreglo.length; i++){
     if(arreglo[i] > 18){
       suma+= 1;
 
     }
   }
-  return suma;
+  return suma;*/
+
+  const result = arreglo.filter( unidad => unidad > 18);
+ return result.length;
 
 }
 
@@ -204,12 +209,21 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  let part = String(n);
-  if(part[0] == 9){
+  /*let partir = String(n);
+  if(partir[0] == 9){
     return true;
   }else{
     return false;
-  }
+  }*/
+
+  // operador ternario:
+  //let partir = String(n);
+  //return  empieza = partir[0] == 9 ? true : false;
+  
+  let partir = String(n);
+  if(partir[0] == 9)return true;
+  return false;
+
   
   
 }
