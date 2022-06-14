@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { stringify } = require("git-url-parse");
+
 function crearUsuario() {
   // Crea una Clase de ES6 o una función constructor llamada "Usuario"
   // Debe aceptar un objeto "opciones" con las propiedades "usuario", "nombre", "email" y "password"
@@ -16,19 +18,27 @@ function crearUsuario() {
     this.password = opciones.password;
   }
   //metodo en el prototypo Usuario
-  Usuario.prototype.saludar = function(){
+  
+ Usuario.prototype.saludar = function(){
     return "Hola, mi nombre es "+ this.nombre;
   }
   return Usuario;
+  
+
 }
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
-  Constructor.prototype.saludar = function(){
-    return "Hello World!";
-  }
+
+
+  //Constructor.prototype.saludar = function(){
+  // return "Hello World!";
+  //}
+
+  Constructor.prototype.saludar = () => "Hello World!";
+  
 }
 
 function agregarStringInvertida() {
@@ -47,6 +57,8 @@ function agregarStringInvertida() {
     }
     return letras;
   }
+
+  
   
 }
 

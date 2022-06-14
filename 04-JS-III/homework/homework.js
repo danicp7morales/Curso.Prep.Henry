@@ -32,19 +32,30 @@ function incrementarPorUno(array) {
     newArray.push(array[i] + 1);
   }
   return newArray;*/
-  const sumaUno =[];
+
+  //CON UN WHILE
+  /*const sumaUno =[];
   let i = 0;
   while(i < array.length){
     sumaUno.push(array[i] +1);
     i++;
   }
-  return sumaUno;
-  
+  return sumaUno;*/
+
+  //CON UN FOREACH
   /*let sumanum = [];
    array.forEach(element => {
     sumanum.push(element + 1);
   });
   return sumanum;*/
+
+  //CON UN MAP Y UNA FUNCTION FLECHA
+  return mapa2 = array.map(value => value +1 );
+  
+  //CON UN MAP FUNCTION SIMPLE
+  /*return mapa3 = array.map(function(value){
+    return value +1;
+  });*/
   
 }
 
@@ -115,7 +126,10 @@ function agregarNumeros(numeros) {
     sumaDeNumeros += numeros[i];
   }
   return sumaDeNumeros;*/
-  return numeros.reduce(function(a, b){ return a + b; });
+
+  //return numeros.reduce(function(a, b){ return a + b; });
+
+  return numeros.reduce((a, b) => a + b) 
   
   
   
@@ -135,6 +149,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+
   let elNumeroMasGrande = 0;
   for(let i = 0; i < numeros.length; i++){
     if(numeros[i] > elNumeroMasGrande){
@@ -179,7 +194,7 @@ function cuentoElementos(arreglo){
   }
   return suma;*/
 
-  const result = arreglo.filter( unidad => unidad > 18);
+ const result = arreglo.filter( unidad => unidad > 18);
  return result.length;
 
 }
@@ -221,9 +236,10 @@ function empiezaConNueve(n) {
   //return  empieza = partir[0] == 9 ? true : false;
   
   let partir = String(n);
-  if(partir[0] == 9)return true;
+  if(partir[0] == 9) return true; 
   return false;
 
+  
   
   
 }
@@ -257,11 +273,14 @@ function mesesDelAño(array) {
       newArray.push(array[i]);
     }
   }
-  if(newArray.length === 3){
+  let estan = newArray.length === 3 ? newArray : "No se encontraron los meses pedidos";
+  return estan;
+
+  /*if(newArray.length === 3){ 
     return newArray;
   }else{
     return "No se encontraron los meses pedidos"
-  }
+  }*/
 
  
 
@@ -304,11 +323,14 @@ function breakStatement(numero) {
       newArray10.push(numero);
     }
   }
-  if(newArray10.length < 10){
+
+  let n = newArray10.length < 10 ? "Se interrumpió la ejecución": newArray10;
+  return n;
+  /*if(newArray10.length < 10){
     return "Se interrumpió la ejecución";
   }else{
     return newArray10;
-  }
+  }*/
 }
 
 
