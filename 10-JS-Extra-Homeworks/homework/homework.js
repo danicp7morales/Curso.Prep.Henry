@@ -10,11 +10,14 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  let array = [];
+  /*let array = [];
   for(let key in objeto){
     array.push([key,objeto[key]]);
   }
-  return array;
+  return array;*/
+
+  return matriz = Object.entries(objeto);
+  //return matriz;
 }
 
 
@@ -27,7 +30,7 @@ function numberOfCharacters(string) {
   string.split("").forEach((item) => {
     if(!letra.includes(item)) letra.push(item);
   })
-  let rep = {};
+  const rep = {};
   letra.forEach((item) =>{
     let contador = 0;
     string.split("").forEach((items) => {
@@ -82,11 +85,12 @@ function capicua(numero){
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
   let reves = numero.toString().split("").reverse().join("");
-  if(numero == reves){
+return revertido = numero == reves ? "Es capicua" : "No es capicua";
+  /*if(numero == reves){
     return "Es capicua";
   }else{
     return "No es capicua";
-  }
+  }*/
  
 }
 
@@ -104,8 +108,8 @@ function deleteAbc(cadena){
     }
   }
   return nuevaCadena;
-  
 }
+  
 
 
 function sortArray(arr) {
