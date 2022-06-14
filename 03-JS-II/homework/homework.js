@@ -58,9 +58,18 @@ function conection(status) {
   //let conett = status === 1 ? "Online" : status === 2 ? "Away" : "Offline";
   //return conett;
 
-  if(status === 1) return "Online";
-  if(status === 2) return "Away";
-  return "Offline";
+  // if(status === 1) return "Online";
+  // if(status === 2) return "Away";
+  // return "Offline";
+
+  switch(status){
+    case 1 :
+      return "Online";
+      case 2 :
+        return "Away";
+        default :
+        return "Offline";
+  }
   
 }
 
@@ -86,23 +95,20 @@ function saludo(idioma) {
   idioma === "ingles" ? "Hello!" : "Hola!";
   return hablar;*/
 
- /* switch(idioma){
+ switch(idioma){
     case "aleman":
       return "Guten Tag!";
-      break;
       case "mandarin":
         return "Ni Hao!";
-        break;
         case "ingles":
           return "Hello!";
-          break;
           default :
           return "Hola!";
-  }*/
-  if(idioma === "aleman") return "Guten Tag!";
-  if(idioma === "mandarin") return "Ni Hao!";
-  if(idioma === "ingles") return "Hello!";
-  return "Hola!";
+  }
+  //if(idioma === "aleman") return "Guten Tag!";
+  //if(idioma === "mandarin") return "Ni Hao!";
+  //if(idioma === "ingles") return "Hello!";
+  //return "Hola!";
 
 }
 
@@ -117,20 +123,17 @@ function colors(color) {
   /*switch (color) {
     case "blue":
      return"This is blue";
-      break
      case "red":
       return"This is red";
-      break
      case "green":
       return"This is green";
-      break
      case "orange":
       return"This is orange";
-      break
     default: 
     return"Color not found";
 
   }*/
+  //operador ternario
   //let colores = color === "blue" ? "This is blue" : color === "red" ? "This is red" : color === "green" ?
   //"This is green" : color === "orange" ?  "This is orange" : "Color not found";
   //return colores;
@@ -164,8 +167,11 @@ function estaEnRango(numero) {
   }else{
     return false;
   }*/
-  let rango = numero < 50 && numero > 20 ? true : false;
-  return rango;
+  //let rango = numero < 50 && numero > 20 ? true : false;
+  //return rango;
+
+  if(numero < 50 && numero > 20)return true;
+  return false;
 }
 
 function esEntero(numero) {
@@ -183,6 +189,7 @@ function esEntero(numero) {
   }*/
   let entero = numero === Math.floor(numero) ? true : false ;
   return entero;
+  
 }
 
 function fizzBuzz(numero) {
@@ -190,7 +197,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  /*if(numero % 3 === 0 && numero % 5 === 0){
+  if(numero % 3 === 0 && numero % 5 === 0){
     return "fizzbuzz";
   }else if(numero % 3 === 0){
     return "fizz";
@@ -198,10 +205,23 @@ function fizzBuzz(numero) {
     return "buzz";
   }else{
     return numero;
+  }
+
+  // operador ternario:
+  // let divisi = numero % 3 === 0 && numero % 5 === 0 ? "fizzbuzz": numero % 3 === 0 ? "fizz":
+  // numero % 5 === 0 ? "buzz" : numero;
+  // return divisi;
+
+  /*switch(numero){
+    case numero % 3 === 0 && numero % 5 === 0 :
+      return "fizzbuzz";
+      case numero % 3 === 0 :
+        return "fizz";
+        case numero % 5 === 0 :
+          return "buzz";
+          default :
+          return numero;
   }*/
-  let divisi = numero % 3 === 0 && numero % 5 === 0 ? "fizzbuzz": numero % 3 === 0 ? "fizz":
-  numero % 5 === 0 ? "buzz" : numero;
-  return divisi;
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -226,6 +246,19 @@ function operadoresLogicos(num1, num2, num3) {
   "Hay negativos" : num1 > num2 && num1 > num3 ? "Número 1 es mayor y positivo": num3 > num1 && num3 > num2 ?
   num3 + 1 : false;
   return operadores;
+
+  /*switch(num1, num2, num3){
+    case num1 === 0 || num2 === 0 || num3 === 0 :
+      return "Error";
+      case num1 < 0 || num2 < 0 || num3 < 0 :
+        return "Hay negativos";
+        case num1 > num2 && num1 > num3 :
+          return "Número 1 es mayor y positivo";
+          case num3 > num1 && num3 > num2 :
+            return num3 + 1;
+            default :
+            return false;
+  }*/
      
 }
 
@@ -263,11 +296,22 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  let arrayTablaDel6 =[];
+ /* const arrayTablaDel6 =[];
   for(let i = 0; i < 11 ; i++){
     arrayTablaDel6.push(6 * i)
   }
-  return arrayTablaDel6;
+  return arrayTablaDel6; */
+  
+  // const num =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // return numPor6 = num.map(value =>
+    // value * 6
+  // )
+  
+  const num =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  return numpor6 = num.map(function(value){
+     return value * 6;
+  })
+  
 }
 
 function tieneTresDigitos(numero){
