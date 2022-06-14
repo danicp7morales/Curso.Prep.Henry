@@ -65,10 +65,11 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // y devuelve el array
   // Tu código:
 
-  // array.push(elemento);
-
-  array[array.length] = elemento;
+  array.push(elemento);
   return array;
+
+  //array[array.length] = elemento;
+  //return array;
 }
 
 

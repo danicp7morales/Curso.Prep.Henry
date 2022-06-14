@@ -31,7 +31,7 @@ function sumarArray(numeros, cb) {
     suma+=numeros[i];
   }
   return cb(suma);*/
- let suma = numeros.reduce((a, b)=> a + b)
+ suma = numeros.reduce((a, b)=> a + b)
  return cb(suma);
 }
 
