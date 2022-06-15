@@ -70,7 +70,7 @@ function filter(array) {
     }
   }
   return newArray5;*/
-  return result = array.filter( unidad => unidad[0] === "a");
+  return result = array.filter(unidad => unidad[0] === "a");
 
 }
 

@@ -158,8 +158,6 @@ function sortArray(arr) {
   }
   return arr;*/
   return array = arr.sort((a, b) => a.length - b.length);
-  
-
 }
 
 
