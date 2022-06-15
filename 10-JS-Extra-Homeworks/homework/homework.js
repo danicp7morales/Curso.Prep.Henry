@@ -47,7 +47,7 @@ function numberOfCharacters(string) {
   const array = string.split("");
   for(let i = 0; i < array.length; i++){
     !respons[array[i]] ? respons[array[i]] = 1 : respons[array[i]]++;
-}
+  }
   return respons;
 }
 
@@ -69,9 +69,7 @@ function capToFront(s) {
   }*/
   
   //return string.join("");
-  const minusculas = [];
-  const mayusculas = [];
-  
+  const mayusculas = []; const minusculas = []; 
   for(i = 0; i < s.length; i++)s[i] === s[i].toUpperCase() ? mayusculas.push(s[i]): minusculas.push(s[i]);
   return mayusculas.join("") + minusculas.join("");
 }
@@ -109,7 +107,7 @@ function capicua(numero){
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
   let reves = numero.toString().split("").reverse().join("");
-return revertido = numero == reves ? "Es capicua" : "No es capicua";
+  return revertido = numero == reves ? "Es capicua" : "No es capicua";
   /*if(numero == reves){
     return "Es capicua";
   }else{
@@ -147,7 +145,7 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-  let contador = 0;
+  /*let contador = 0;
   while(contador < arr.length){
     for (let i = 0; i < arr.length-1; i++){
       if(arr[i].length > arr[i+1].length){
@@ -158,7 +156,10 @@ function sortArray(arr) {
       contador ++
     }
   }
-  return arr;
+  return arr;*/
+  return array = arr.sort((a, b) => a.length - b.length);
+  
+
 }
 
 
