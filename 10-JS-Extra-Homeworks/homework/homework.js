@@ -10,6 +10,7 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+
   /*let array = [];
   for(let key in objeto){
     array.push([key,objeto[key]]);
@@ -26,6 +27,7 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  /*
   const letra = [];
   string.split("").forEach((item) => {
     if(!letra.includes(item)) letra.push(item);
@@ -38,7 +40,15 @@ function numberOfCharacters(string) {
     })
     rep[item] = contador;
   })
-  return rep;
+  return rep;*/
+
+
+  const respons = {};
+  const array = string.split("");
+  for(let i = 0; i < array.length; i++){
+    !respons[array[i]] ? respons[array[i]] = 1 : respons[array[i]]++;
+}
+  return respons;
 }
 
 
@@ -69,11 +79,20 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  const stringC =[];
-        for(let i = 0; i < str.length; i++){
+ // const stringC = [];
+  /*for(let i = 0; i < str.length; i++){
      stringC.unshift(str[i])
   }
- return stringC.join("").split(" ").reverse().join(" ");
+  return stringC.join("").split(" ").reverse().join(" ");
+  */
+
+
+  //const stringC = str.split("").reverse()
+  //return stringC.join("").split(" ").reverse().join(" ");
+
+  return strin = str.split("").reverse().join("").split(" ").reverse().join(" ");
+ 
+  
   
 
 } 
@@ -98,7 +117,7 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-  let nuevaCadena = "";
+  /*let nuevaCadena = "";
   let eliminarLetras = ["a", "b", "c"];
   for(let i = 0; i < cadena.length; i++){
     if(eliminarLetras.includes(cadena[i])){
@@ -106,6 +125,13 @@ function deleteAbc(cadena){
     }else{
       nuevaCadena += cadena[i];
     }
+  }
+  return nuevaCadena;*/
+  let nuevaCadena = "";
+  for(let i = 0; i < cadena.length; i++){
+  if(!(cadena[i] === "a" || cadena[i] === "b" || cadena[i] === "c")){
+    nuevaCadena += cadena[i];
+  }
   }
   return nuevaCadena;
 }

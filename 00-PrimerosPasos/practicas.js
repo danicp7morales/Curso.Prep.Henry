@@ -34,3 +34,20 @@ console.log(divisibleEntreCuatroES6); // [4, 8, 12, 16, 20]
 
 
 ;
+
+//try catch
+function holaMundo(){
+    const mensaje = "Hola mundo!";
+    try {
+
+    } catch (error) {
+        return("saliendo del try catch")
+        
+    }
+    return mensaje;
+
+}
+return holaMundo();
+
+
+
