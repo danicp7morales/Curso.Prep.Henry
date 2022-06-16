@@ -78,7 +78,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  array.unshift(elemento);
+  array.unshift(elemento); 
   return array;
 }
 
@@ -89,8 +89,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-   const arrayFrases = palabras.join(" ");
-   return arrayFrases;
+  return arrayFrases = palabras.join(" ");
 
   
 
@@ -151,20 +150,18 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
 
-  let elNumeroMasGrande = 0;
+  /*let elNumeroMasGrande = 0;
   for(let i = 0; i < numeros.length; i++){
     if(numeros[i] > elNumeroMasGrande){
       elNumeroMasGrande = numeros[i];
     }
   }
-  return elNumeroMasGrande;
+  return elNumeroMasGrande;*/
+  return grande = numeros.reduce((a, b) => a > b ? a : b);
+  //return grande;
 
  
 
-  
-
-  
-  
 }
 
 
@@ -172,15 +169,19 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
- let nSuma = 1;
+ /*let nSuma = 1;
  if(arguments.length < 1)return 0;
 
  for(let i = 0; i < arguments.length; i++ ){
    nSuma = nSuma * arguments[i];
  }
- return nSuma;
+ return nSuma;*/
+ if(arguments.length < 1)return 0;
+ const arg = [...arguments];
+ return total = arg.reduce((a, b) => a * b);
 }
 //multiplicarArgumentos(2, 3, 5)
+
 
 
 function cuentoElementos(arreglo){
@@ -195,7 +196,7 @@ function cuentoElementos(arreglo){
   }
   return suma;*/
 
- const result = arreglo.filter( unidad => unidad > 18);
+ const result = arreglo.filter(unidad => unidad > 18);
  return result.length;
 
 }
@@ -215,8 +216,8 @@ function diaDeLaSemana(numeroDeDia) {
   // if(numeroDeDia === 1 || numeroDeDia === 7) return "Es fin de semana";
   // return "Es dia Laboral";
 
-  let num = numeroDeDia === 1 || numeroDeDia === 7 ? "Es fin de semana" : "Es dia Laboral";
-  return num;
+  return num = numeroDeDia === 1 || numeroDeDia === 7 ? "Es fin de semana" : "Es dia Laboral";
+  //return num;
   
 } 
 
@@ -236,9 +237,12 @@ function empiezaConNueve(n) {
   //let partir = String(n);
   //return  empieza = partir[0] == 9 ? true : false;
   
-  let partir = String(n);
-  if(partir[0] == 9) return true; 
-  return false;
+  let partir = String(n); return partir[0] == 9 ? true : false;
+
+  //if(partir[0] == 9) return true; 
+  //return false;
+ // return partir[0] == 9 ? true : false;
+
 
   
   
@@ -255,8 +259,8 @@ function todosIguales(arreglo) {
     }
   }
   return true;*/
-  let verdad = arreglo.every(elem => elem === arreglo[0]);
-  return verdad;
+  return verdad = arreglo.every(elem => elem === arreglo[0]);
+  //return verdad;
 
 } 
 
@@ -269,14 +273,18 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
    
-  let newArray = [];
+  /*let newArray = [];
   for(let i = 0; i < array.length; i++){
     if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
       newArray.push(array[i]);
     }
   }
-  let estan = newArray.length === 3 ? newArray : "No se encontraron los meses pedidos";
-  return estan;
+  return estan = newArray.length === 3 ? newArray : "No se encontraron los meses pedidos";
+  
+  */
+  const meses = array.filter(mes => mes ==="Enero" || mes === "Marzo" || mes === "Noviembre")
+  return estan = meses.length === 3 ? meses : "No se encontraron los meses pedidos";
+  //return estan;
 
   /*if(newArray.length === 3){ 
     return newArray;
@@ -301,8 +309,8 @@ function mayorACien(array) {
     }
   }
   return newArray7;*/
- const result = array.filter( arr => arr > 100);
- return result;
+ return result = array.filter( arr => arr > 100);
+ //return result;
 
 
 }
@@ -326,8 +334,8 @@ function breakStatement(numero) {
     }
   }
 
-  let n = newArray10.length < 10 ? "Se interrumpió la ejecución": newArray10;
-  return n;
+  return n = newArray10.length < 10 ? "Se interrumpió la ejecución": newArray10;
+  
   /*if(newArray10.length < 10){
     return "Se interrumpió la ejecución";
   }else{
