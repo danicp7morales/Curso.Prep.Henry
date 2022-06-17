@@ -1,8 +1,10 @@
 h1{
     color: rgb(157, 255, 0);
+    
 }
 img{
  width: 400px;
+ 
 } 
 #thirdDiv{
  height: 600;
@@ -10,11 +12,12 @@ img{
  background-color: darkorange;
  padding: 50px;
  border: 2px, solid, black  ;
+ margin-left: auto;
+ margin-right:auto;
+ color:black;
 }
-s#panId{
+#spanId{
  font-size: 18px;
  margin: 50px;
-}
-body{
-    background-color: darkred;
+ color:black;
 }
