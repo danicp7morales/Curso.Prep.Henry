@@ -17,8 +17,10 @@ function obtenerMayor(x, y) {
   //let mayor = x > y ? x : y;
   //return mayor;
    
-  if(x > y)return x;
-  return y;
+  //if(x > y)return x;
+  //return y;
+
+  return mG = x > y ? x : y;
 
 }
 
@@ -36,8 +38,10 @@ function mayoriaDeEdad(edad) {
   //let mayoria = edad > 17 ? "Allowed" : "Not allowed";
   //return mayoria;
 
-  if(edad >= 18) return "Allowed";
-  return "Not allowed"; 
+  //if(edad >= 18) return "Allowed";
+  //return "Not allowed";
+  
+  return esMayor = edad > 17 ? "Allowed" : "Not allowed";
 }
   
 function conection(status) {
@@ -55,21 +59,21 @@ function conection(status) {
   }*/
 
   // operador ternario:
-  //let conett = status === 1 ? "Online" : status === 2 ? "Away" : "Offline";
+  return conex = status === 1 ? "Online" : status === 2 ? "Away" : "Offline";
   //return conett;
 
   // if(status === 1) return "Online";
   // if(status === 2) return "Away";
   // return "Offline";
 
-  switch(status){
+  /*switch(status){
     case 1 :
       return "Online";
       case 2 :
         return "Away";
         default :
         return "Offline";
-  }
+  }*/
   
 }
 
@@ -91,11 +95,11 @@ function saludo(idioma) {
   }*/
 
   // operador ternario:
-  /*let hablar = idioma === "aleman" ? "Guten Tag!": idioma === "mandarin" ? "Ni Hao!" :
-  idioma === "ingles" ? "Hello!" : "Hola!";
-  return hablar;*/
+  return hi = idioma === "aleman" ? "Guten Tag!": idioma === "mandarin" ? "Ni Hao!" :idioma === "ingles" ?
+   "Hello!" : "Hola!";
+  //return hablar;*/
 
- switch(idioma){
+ /*switch(idioma){
     case "aleman":
       return "Guten Tag!";
       case "mandarin":
@@ -104,7 +108,7 @@ function saludo(idioma) {
           return "Hello!";
           default :
           return "Hola!";
-  }
+  }*/
   //if(idioma === "aleman") return "Guten Tag!";
   //if(idioma === "mandarin") return "Ni Hao!";
   //if(idioma === "ingles") return "Hello!";
@@ -134,15 +138,15 @@ function colors(color) {
 
   }*/
   //operador ternario
-  //let colores = color === "blue" ? "This is blue" : color === "red" ? "This is red" : color === "green" ?
-  //"This is green" : color === "orange" ?  "This is orange" : "Color not found";
+  return es = color === "blue" ? "This is blue" : color === "red" ? "This is red" : color === "green" ?
+  "This is green" : color === "orange" ?  "This is orange" : "Color not found";
   //return colores;
    
-  if(color === "blue") return "This is blue";
+ /* if(color === "blue") return "This is blue";
   if(color === "red") return "This is red";
   if(color === "green") return "This is green";
   if(color === "orange") return "This is orange";
-  return "Color not found";
+  return "Color not found";*/
 }
 
 function esDiezOCinco(numero) {
@@ -154,8 +158,8 @@ function esDiezOCinco(numero) {
   }else{
     return false; 
   }*/
-  let acertar = numero === 10 || numero === 5 ? true : false ;
-  return acertar;
+  return acertar = numero === 10 || numero === 5 ? true : false ;
+  //return acertar;
 }
 
 function estaEnRango(numero) {
@@ -167,11 +171,11 @@ function estaEnRango(numero) {
   }else{
     return false;
   }*/
-  //let rango = numero < 50 && numero > 20 ? true : false;
+  return rango = numero < 50 && numero > 20 ? true : false;
   //return rango;
 
-  if(numero < 50 && numero > 20)return true;
-  return false;
+  //if(numero < 50 && numero > 20)return true;
+  //return false;
 }
 
 function esEntero(numero) {
@@ -187,8 +191,8 @@ function esEntero(numero) {
   }else{
     return false;
   }*/
-  let entero = numero === Math.floor(numero) ? true : false ;
-  return entero;
+  return ent = numero === Math.floor(numero) ? true : false ;
+  //return entero;
   
 }
 
@@ -197,7 +201,7 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if(numero % 3 === 0 && numero % 5 === 0){
+  /*if(numero % 3 === 0 && numero % 5 === 0){
     return "fizzbuzz";
   }else if(numero % 3 === 0){
     return "fizz";
@@ -205,11 +209,11 @@ function fizzBuzz(numero) {
     return "buzz";
   }else{
     return numero;
-  }
+  }*/
 
   // operador ternario:
-  // let divisi = numero % 3 === 0 && numero % 5 === 0 ? "fizzbuzz": numero % 3 === 0 ? "fizz":
-  // numero % 5 === 0 ? "buzz" : numero;
+   return divisi = numero % 3 === 0 && numero % 5 === 0 ? "fizzbuzz": numero % 3 === 0 ? "fizz":
+   numero % 5 === 0 ? "buzz" : numero;
   // return divisi;
 
   /*switch(numero){
@@ -242,10 +246,10 @@ function operadoresLogicos(num1, num2, num3) {
   }else{
     return false;
   }*/
-  let operadores = num1 === 0 || num2 === 0 || num3 === 0 ? "Error" : num1 < 0 || num2 < 0 || num3 < 0 ? 
+  return  operadores = num1 === 0 || num2 === 0 || num3 === 0 ? "Error" : num1 < 0 || num2 < 0 || num3 < 0 ? 
   "Hay negativos" : num1 > num2 && num1 > num3 ? "Número 1 es mayor y positivo": num3 > num1 && num3 > num2 ?
   num3 + 1 : false;
-  return operadores;
+ // return operadores;
 
   /*switch(num1, num2, num3){
     case num1 === 0 || num2 === 0 || num3 === 0 :
@@ -271,12 +275,15 @@ function esPrimo(numero) {
   if(numero < 2) return false;
   if(numero === 2) return true;
   for(let i = 2; i < numero; i++){
+    if(numero % i === 0)return false;
+  }
+  return true;
+  /*for(let i = 2; i < numero; i++){
     if(numero % i === 0){
       return false;
     }
   }
-  return true;
-
+  return true;*/
 }
 
 function esVerdadero(valor){
@@ -288,8 +295,8 @@ function esVerdadero(valor){
   }else{
     return "Soy falso";
   }*/
-let verdadero = valor === true ? "Soy verdadero" : "Soy falso";
-return verdadero;
+return soy = valor === true ? "Soy verdadero" : "Soy falso";
+//return verdadero;
 }
 
 function tablaDelSeis(){
@@ -302,16 +309,14 @@ function tablaDelSeis(){
   }
   return arrayTablaDel6; */
   
-  // const num =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  // return numPor6 = num.map(value =>
-    // value * 6
-  // )
-  
   const num =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  return tabl6 = num.map(value => value * 6 );
+  
+  /*const num =[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   return numpor6 = num.map(function(value){
      return value * 6;
   })
-  
+  */
 }
 
 function tieneTresDigitos(numero){
@@ -322,8 +327,8 @@ function tieneTresDigitos(numero){
   }else{
     return false;
   }*/
-  let tresd = numero > 99 && numero < 1000 ? true : false;
-  return tresd;
+  return valor = numero > 99 && numero < 1000 ? true : false;
+  //return tresd;
   
 
   

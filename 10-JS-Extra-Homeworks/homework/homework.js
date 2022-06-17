@@ -43,12 +43,18 @@ function numberOfCharacters(string) {
   return rep;*/
 
 
-  const respons = {};
+  /*const respons = {};
   const array = string.split("");
   for(let i = 0; i < array.length; i++){
     !respons[array[i]] ? respons[array[i]] = 1 : respons[array[i]]++;
   }
-  return respons;
+  return respons;*/
+
+
+  const numDV = {};
+  const arr = string.split("");
+  arr.forEach(e => {!numDV[e] ? numDV[e] = 1 : numDV[e]++;});
+  return numDV;
 }
 
 
@@ -69,9 +75,9 @@ function capToFront(s) {
   }*/
   
   //return string.join("");
-  const mayusculas = []; const minusculas = []; 
-  for(i = 0; i < s.length; i++)s[i] === s[i].toUpperCase() ? mayusculas.push(s[i]): minusculas.push(s[i]);
-  return mayusculas.join("") + minusculas.join("");
+  const mayus = []; const minus = []; 
+  for(i = 0; i < s.length; i++)s[i] === s[i].toUpperCase() ? mayus.push(s[i]): minus.push(s[i]);
+  return mayus.join("") + minus.join("");
 }
 
 
@@ -107,7 +113,7 @@ function capicua(numero){
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
   let reves = numero.toString().split("").reverse().join("");
-  return revertido = numero == reves ? "Es capicua" : "No es capicua";
+  return revert = numero == reves ? "Es capicua" : "No es capicua";
   /*if(numero == reves){
     return "Es capicua";
   }else{
@@ -137,6 +143,9 @@ function deleteAbc(cadena){
   }
   }
   return nuevaCadena;
+ 
+
+
 }
   
 
@@ -176,6 +185,8 @@ function buscoInterseccion(arreglo1, arreglo2){
     }
   } 
   return inter;
+ 
+  
 }
 
 

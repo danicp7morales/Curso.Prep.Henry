@@ -50,7 +50,7 @@ function incrementarPorUno(array) {
   return sumanum;*/
 
   //CON UN MAP Y UNA FUNCTION FLECHA
-  return mapa2 = array.map(value => value +1 );
+  return arr = array.map(value => value +1 );
   
   //CON UN MAP FUNCTION SIMPLE
   /*return mapa3 = array.map(function(value){
@@ -237,7 +237,8 @@ function empiezaConNueve(n) {
   //let partir = String(n);
   //return  empieza = partir[0] == 9 ? true : false;
   
-  let partir = String(n); return partir[0] == 9 ? true : false;
+  let partir = String(n); 
+  return partir[0] == 9 ? true : false;
 
   //if(partir[0] == 9) return true; 
   //return false;
@@ -259,7 +260,7 @@ function todosIguales(arreglo) {
     }
   }
   return true;*/
-  return verdad = arreglo.every(elem => elem === arreglo[0]);
+  return es = arreglo.every(elem => elem === arreglo[0]);
   //return verdad;
 
 } 

@@ -29,47 +29,47 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  //return str;
-  let cajaDestring = str;
-  return cajaDestring;
+  return str;
+  //return cajaDestring = str;
+  //return cajaDestring;
 }
 
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  //return x + y;
-  let sumatoria = x + y;
-  return sumatoria;
+  return x + y;
+  //return sumatoria = x + y;
+  //return sumatoria;
   
 }
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  //return x - y;
-  let quitar = x - y;
-  return quitar;
+  return x - y;
+  //return quitar = x - y;
+  //return quitar;
   
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  //return x * y;
-  let doblegar = x * y;
-  return doblegar; 
+  return x * y;
+  //return doblegar = x * y;
+  //return doblegar; 
   
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  //return x / y;
-  let equis = x;
+  return x / y;
+  /*let equis = x;
   let ye = y;
   let dividiendoXY = equis / ye;
-  return dividiendoXY;
+  return dividiendoXY;*/
   
 }
 
@@ -77,24 +77,24 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  //return x === y;
-  if (x === y){
+  return x === y;
+  /*if (x === y){
     return true;
   }else{
     return false;
-  }
+  }*/
 }
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  //return str1.length === str2.length;
-  if(str1.length !== str2.length){
+  return str1.length === str2.length;
+  /*if(str1.length !== str2.length){
     return false;
   }else{
     return true;
-  }
+  }*/
   
 }
 
@@ -102,16 +102,16 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  //return num < 90;
-  return num <= 89;
+  return num < 90;
+  //return num <= 89;
 }
 
 function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  //return num > 50;
-  return num >= 51;
+  return num > 50;
+  //return num >= 51;
   
 }
 
@@ -128,12 +128,12 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  //return num % 2 === 0;
-  if(num % 2 !== 0){
+  return num % 2 === 0;
+  /*if(num % 2 !== 0){
     return false;
   }else{
     return true;
-  }
+  }*/
 
   
 }
@@ -142,22 +142,22 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  //return num % 2 !== 0;
-  if(num % 2 === 0){
+  return num % 2 !== 0;
+  /*if(num % 2 === 0){
     return false;
   }else{
     return true;
   }
-  
+  */
 }
 
 function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  //return num * num;
+  return num * num;
   // return Math.pow(num, 2);
-  return num ** 2;
+  //return num ** 2;
   
 }
 
@@ -217,8 +217,8 @@ function esPositivo(numero) {
   if(numero < 0)return "Es negativo";
   return false;*/
   
-  let num = numero > 0 ? "Es positivo" : numero < 0 ? "Es negativo" : false;
-  return num;
+  return num = numero > 0 ? "Es positivo" : numero < 0 ? "Es negativo" : false;
+ // return num;
 
 
 }
@@ -227,24 +227,24 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  //return str+"!";
-  let signo = "!";
-  let strin = str;
+  return str+"!";
+  //let signo = "!";
+  //let strin = str;
   //return `${strin}${signo}`;
-  let agregar = strin.concat(signo);
-  return agregar;
+  //let agregar = strin.concat(signo);
+  //return agregar;
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  //return nombre +" "+ apellido;
-  let nombres = nombre;
+  return nombre +" "+ apellido;
+  /*let nombres = nombre;
   let apellidos = apellido;
   //return `${nombres} ${apellidos}`;
   let unir = nombres.concat(" ", apellidos);
-  return unir;
+  return unir;*/
   
 }
 
@@ -253,22 +253,22 @@ function obtenerSaludo(nombre) {
   // "Martin" -> "Hola Martin!"
   // Tu código:
   //return "Hola "+ nombre +"!";
-  let nombres = nombre;
-  //return `Hola ${nombres}!`;
-  let ho = "Hola";
+  //let nombres = nombre;
+  return `Hola ${nombre}!`;
+  /*let ho = "Hola";
   let saludit = ho.concat(" ",nombres,"!");
-  return saludit;
+  return saludit;*/
   
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  //return alto * ancho;
-  let altura = alto;
+  return alto * ancho;
+ /* let altura = alto;
   let elAncho = ancho;
   let resultado = altura * elAncho;
-  return resultado;
+  return resultado;*/
 
   
 }
@@ -277,8 +277,8 @@ function obtenerAreaRectangulo(alto, ancho) {
 function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  //return lado * 4;
-  return lado + lado + lado + lado;
+  return lado * 4;
+  //return lado + lado + lado + lado;
   
 
   
@@ -343,12 +343,13 @@ function esVocal(letra){
   }*/
   
 
-  //let letter = letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u" ?
-  //"Es vocal" : "Dato incorrecto";
-  //return letter;
-  const arrayletras = ["a", "e" ,"i" ,"o" ,"u"];
+  return letter = letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u" ?
+  "Es vocal" : "Dato incorrecto";
+  
+  /*const arrayletras = ["a", "e" ,"i" ,"o" ,"u"];
   if(arrayletras.includes(letra))return "Es vocal";
-  return "Dato incorrecto";
+  return "Dato incorrecto";*/
+
 
   
 }

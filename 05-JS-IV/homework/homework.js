@@ -141,9 +141,12 @@ function pasarUsuarioAPremium(usuarios) {
   //}
   //return usuarios;
 
-  usuarios.forEach(element => {
+  /*usuarios.forEach(element => {
   element.esPremium = true;
   });
+  return usuarios;*/
+
+  usuarios.forEach(element => {element.esPremium = true; });
   return usuarios;
 }
 
