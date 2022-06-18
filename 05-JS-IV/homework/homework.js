@@ -85,7 +85,7 @@ function tieneEmail(usuario) {
   // return false;
 
   return usuario.email ? true: false;
-
+  
 }
 
 

@@ -139,7 +139,7 @@ function deleteAbc(cadena){
   let nuevaCadena = "";
   for(let i = 0; i < cadena.length; i++){
   if(!(cadena[i] === "a" || cadena[i] === "b" || cadena[i] === "c")){
-    nuevaCadena += cadena[i];
+     nuevaCadena += cadena[i];
   }
   }
   return nuevaCadena;
@@ -176,7 +176,7 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí 
-  const inter = [];
+  /*const inter = [];
   for(let i = 0; i < arreglo1.length; i++){
     for(let j = 0; j < arreglo2.length; j++){
       if(arreglo1[i] === arreglo2[j]){
@@ -184,9 +184,13 @@ function buscoInterseccion(arreglo1, arreglo2){
       }
     }
   } 
-  return inter;
- 
-  
+  return inter;*/
+  const arr = [];
+  for(let i = 0; i < arreglo1.length; i++){
+    if(arreglo2.includes(arreglo1[i]))
+    arr.push(arreglo1[i]);
+  }
+  return arr;
 }
 
 

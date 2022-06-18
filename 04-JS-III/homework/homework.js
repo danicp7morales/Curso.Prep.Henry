@@ -333,6 +333,7 @@ function breakStatement(numero) {
     }else{
       newArray10.push(numero);
     }
+    
   }
 
   return n = newArray10.length < 10 ? "Se interrumpió la ejecución": newArray10;
@@ -354,14 +355,13 @@ function continueStatement(numero) {
   // Tu código:
   const arrayNew = [];
   for(let i = 0; i < 10; i++){
-    if(i === 5){
-      continue;
-    }else{
+    if(i === 5)continue;
       numero = numero + 2;
       arrayNew.push(numero);
     }
-  }
   return arrayNew;
+
+
 }
 
 
